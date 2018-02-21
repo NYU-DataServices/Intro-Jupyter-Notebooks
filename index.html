@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Jupyter Notebooks</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- INTRO SLIDE -->
+				<section>
+					<h2>Intro to Jupyter Notebooks</h2><br/>
+					
+					<p>Vicky Steeves and Nicholas Wolf | DATE</p>
+
+					<p>Get this presentation: </p>
+					
+					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
+					
+					<div class='footer'>
+						<hr/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+</div>
+					
+				</section>
+				
+
+				<!-- CONCLUSION SLIDE -->
+				<section>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+							// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
