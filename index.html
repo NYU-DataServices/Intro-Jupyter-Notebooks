@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<link rel="stylesheet" href="reveal/css/theme/simple.css">
-
+		
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 
@@ -30,8 +30,6 @@
 					<h2>Intro to Jupyter Notebooks</h2><br/>
 					
 					<p>Vicky Steeves and Nicholas Wolf | March 6 & 7, 2018</p>
-
-					<p>Get this presentation: </p>
 					
 					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
 					
@@ -45,8 +43,9 @@
 				
 				<!--SLIDE 1-->
 				<section>
-					<h2>Jupyter Notebooks Overview</h2><img src="imgs/jupyter.png" width="30%" height="30%" align="right"><br/>
-					<strong>Web Application</strong>
+					<img src="imgs/jupyter.png" width="20%" height="20%" align="right">
+					<h2>Jupyter Notebooks Overview</h2>
+					<div align="left"><strong>Web Application</strong></div>
 					<ul>
 						<li>In-browser editing for code with auto-syntax highlighting, indentation, tab completion/introspection</li>
 						<li>In-browser code execution, with results attached to the code that generated them</li>
@@ -57,15 +56,144 @@
 				
 				<!--SLIDE 2-->
 				<section>
+					<img src="imgs/jupyter.png" width="20%" height="20%" align="right">
 					<h2>Jupyter Notebooks Overview</h2>
-					<strong>Notebook</strong>
+					<div align="left"><strong>Notebook</strong></div>
 					<ul>
 						<li>A complete computation record of a session, interleaving executable code with text, maths, and rich representations of objects</li>
 						<li>Can export to LaTeX, PDF, slideshows, etc. or available from a public URL that renders it as a static webpage</li>
 					</ul>
 				</section>
 				
-
+				<!--SLIDE 3-->
+				<section>
+					<h2>Examples</h2>
+					<ul>
+						<li><a href="http://nbviewer.jupyter.org/github/robertodealmeida/notebooks/blob/master/earth_day_data_challenge/Analyzing%20whale%20tracks.ipynb" target="_blank">Analyzing Whale Tracks</a>, by Roberto De Almeida</li>
+						<li><a href="http://nbviewer.jupyter.org/github/jseabold/538model/blob/master/silver_model.ipynb" target="_blank">A Reconstruction of 538 2012 Election Model</a>, by Skipper Seabold</li>
+					</ul>
+				</section>
+				
+				<!--SLIDE 4-->
+				<section>
+					<h2>Installation</h2>
+					<ul>
+					<li>Install Jupyter Notebooks on Desktop Quickly Using Anaconda: <a href="https://www.anaconda.com/download/" target="_blank">https://www.anaconda.com/download/</a></li><br></br>
+					<li>Today’s Example Notebook Workspace: <a href="https://drive.google.com/file/d/1rPOHIqLlYx7aM7CPSIAm8mFjL6B44JOk/view?usp=sharing" target="_blank">index.ipynb</a></li>
+					</ul>
+					<br></br>
+					<div align="left">Download this file and save it in a directory where you can find it.</div>
+				</section>
+					
+				
+					
+				<!--SLIDE 5-->
+				<section>
+					<h2>Jupyter Notebook Cheatsheet</h2>
+					<div align="left">
+					Launch Notebook in a Directory Other than Home:
+					<br/>
+					<code>jupyter notebook --notebook-dir=PATH-TO-FOLDER</code><br></br>
+					Code Cells:
+					<br/>
+				    <ul>
+						<li>Notebook will evaluate final statement in cell</li>
+						<li>Use <code>shift + enter</code> to run an active cell</li>
+						<li>Use <code>esc</code> in highlighted cell to toggle command options:
+							<ul>
+								<li><code>esc + L</code> = show line numbers</li>
+								<li><code>esc + M</code> = format cell as Markdown cell</li>
+								<li><code>esc + a</code> = insert cell above current cell</li>
+								<li><code>esc + b</code> = insert cell below current cell</li>
+							</ul></li>
+					</ul>
+				</section>
+				
+				<!--SLIDE 6-->
+				<section>
+					<h2>Jupyter Notebook Cheatsheet</h2>
+					<div align="left">
+					Tidy Display of Pandas Dataframes and Inline Images:
+					<br/><br/>
+					<code>from IPython.display import Image as IM</code><br/>
+					<code>from IPython.display import display</code><br/></br>
+					(Other types: file links, audio files, code, and more. See <a href="https://ipython.org/ipython-doc/3/api/generated/IPython.display.html" target="_blank">here</a>)
+					<br/><br/>
+					Creating and Displaying Interactive Plots:<br/><br/>
+					<code>import matplotlib.pyplot as plt</code><br/>
+					<code>%matplotlib inline</code>
+				</section>
+				
+				<!--SLIDE 7-->
+				<section>
+					<h2>Jupyter Notebook Cheatsheet</h2>
+					<div align="left">
+					Using IPython Display:
+					<br/><br/>
+					<code>display(dataframe)</code><br/>
+					<code>display(image)</code><br/></br>
+					Make a Basic Scatter Plot:<br/><br/>
+					<code>x = list of values</code><br/>
+					<code>y = list of values</code><br/>
+					<code>plt.scatter(x, y)</code>
+					<code>plt.xlabel('X Axis')</code>
+					<code>plt.xlabel('Y Axis')</code>
+				</section>
+				
+				<!--SLIDE 8-->
+				<section>
+					<h2>Jupyter Notebook Cheatsheet</h2>
+					<div align="left">
+					Markdown Cells:
+					<br/><br/>
+					<ul>
+						<li>When run, a markdown cell will display markdown <em>or</em> html that you enter (that means all sort of rich content, including images)</li>
+						<li>Essential markdown summary: <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">https://daringfireball.net/projects/markdown/syntax</a></li>
+					</ul>
+				</section>
+				
+				<!--SLIDE 9-->
+				<section>
+					<h2>Moving a Notebook to the Web</h2>
+					<div align="left">
+					Using NBViewer: <a href="https://nbviewer.jupyter.org/" targert="_blank">https://nbviewer.jupyter.org/</a>:
+					<br/><br/>
+					<ol>
+					<li>Put notebook (.ipynb) file on the web (e.g. Github, Gitlab...somewhere so that URL is http://NAME-OF-NOTEBOOK.ipynb</li>
+					<li>Enter the URL into NBViewer.</li>
+					<li>Click Go! (check out <a href="https://nbviewer.jupyter.org/github/nmwolf/ldw-example/blob/master/Dibner%20Session%20Notebook.ipynb" target="_blank">example here</a>)
+					</ol>
+				</section>
+				
+				<!--SLIDE 10-->
+				<section>
+					<h2>Moving a Notebook to the Web</h2>
+					<div align="left">
+					Using NBConvert: <a href="https://github.com/jupyter/nbconvert" targert="_blank">https://github.com/jupyter/nbconvert</a>:
+					<br/><br/>
+					<ol>
+					<li>In directory of your notebook, enter:<br/>
+					<code>jupyter nbconvert --output-dir='./docs' --to html *.ipynb</code>
+					</li>
+					<li>This gives you a directory called “docs” which has HTML files. If you put these files on GitHub or GitLab, you can render them as webpages.<br/>
+					Example: <a href="https://vickysteeves.gitlab.io/Stories-Code-Data-Py/" target="_blank">https://vickysteeves.gitlab.io/Stories-Code-Data-Py/</a></li>
+					</ol>
+				</section>
+				
+				<!--SLIDE 11-->
+				<section>
+					<h2>More on Jupyter Notebooks</h2>
+					<div align="left">
+					Excellent Tutorial by Justin Bois at Caltech:
+					<br/>
+					<a href="http://bebi103.caltech.edu.s3-website-us-east-1.amazonaws.com/2015/tutorials/t0b_intro_to_jupyter_notebooks.html#Best-practices-for-code-cells" target="_blank">http://bebi103.caltech.edu.s3-website-us-east-1.amazonaws.com/2015/tutorials/t0b_intro_to_jupyter_notebooks.html#Best-practices-for-code-cells</a><br/>
+					<br/>
+					Jupyter.org Documentation for Jupyter Notebooks:<br/>
+					<a href="https://jupyter-notebook.readthedocs.io/en/stable/" target="_blank">https://jupyter-notebook.readthedocs.io/en/stable/</a>
+				</section>
+				
+				
+				
 				<!-- CONCLUSION SLIDE -->
 				<section>
 					<h2>Questions?</h2><br/>
@@ -86,7 +214,7 @@
 			</div>
 		</div>
 
-		<script src="reveal/lib/js/head.min.js"></script>
+				<script src="reveal/lib/js/head.min.js"></script>
 		<script src="reveal/js/reveal.js"></script>
 
 		<script>
@@ -104,3 +232,4 @@
 		</script>
 	</body>
 </html>
+
